@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>注册</title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <script type="text/javascript" src='./js/jquery.min.js'></script>
+    <script type="text/javascript" src='./js/register.js'></script>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            -moz-user-select: none; /*火狐*/ /*禁止用户在页面选择文字*/
+            -webkit-user-select: none; /*webkit浏览器*/
+            -ms-user-select: none; /*IE10*/
+            -khtml-user-select: none; /*早期浏览器*/
+            user-select: none;
+        }
+        .code{
+            width: 400px;
+            margin:0 auto;
+        }
+        .input-val,input{
+            width: 295px;
+            background: #ffffff;
+            height: 2.8rem;
+            padding: 0 2%;
+            border-radius: 5px;
+            border: none;
+            border: 1px solid rgba(0,0,0,.2);
+            font-size: 1.0625rem;
+        }
+        #canvas{
+            float:right;
+            display: inline-block;
+            border:1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn{
+            width: 100px;
+            height: 40px;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 20px auto 0;
+            display: block;
+            font-size: 1.2rem;
+            color: #e22e1c;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color:#87cfe6">
+<h1>Welcome to NJUPT Mainpage</h1>
+<br>
+<p>注册你的账号吧！</p>
+<br>
+<p id="alert_panel" style="color:red"><%= title %></p>
+<br>
+<form action="rcenter" method="post" onsubmit = "return validate()">
+    <p>
+        <input id="name" name="name" type="text" placeholder="请输入用户名"/>
+    </p>
+    <br>
+    <p>
+        <input id="password" name="password" type="password" placeholder="请输入密码"/>
+    </p>
+    <br>
+    <p>
+        <input id="repassword" name="repassword" type="password" placeholder="确认密码"/>
+    </p>
+    <br>
+    <p>
+        <input type="text" value="" placeholder="验证码(不区分大小写)" class="input-val" style="width:195px"/>
+        <canvas id="canvas" width="100" height="43"></canvas>
+    </p>
+    <br><br>
+    <p><input type="submit" value="注册"></p><br><br>
+    <p>我已经有账号了?马上<a href="login">登录</a></p>
+</form>
+
+
+</body>
+
+</html>

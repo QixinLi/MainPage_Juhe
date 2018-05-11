@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src='./js/jquery.min.js'></script>
+    <script type="text/javascript" src='./js/mainpage.js'></script>
+    <link rel="stylesheet" type="text/css" href="./css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style2.css" />
+
+</head>
+
+<body>
+<!-- today -->
+<div id="today" class="panel">
+	<div class="content">
+        <h2>今日</h2>
+        <p><%= title %>，欢迎您！ <a href="/">登出</a></p><br>
+        <div id="getmsgtoday"></div><br>
+        <div id="getmsgweather"></div><br>
+	</div>
+</div>
+<!-- /today -->
+
+<!-- news -->
+<div id="news" class="panel">
+	<div class="content">
+		<h2>头条</h2>
+		<div id="getmsgnews"></div>
+	</div>
+</div>
+<!-- /news -->
+
+<!-- jokes -->
+<div id="jokes" class="panel">
+	<div class="content">
+		<h2>趣图</h2>
+        <div id="getmsgjokes"></div>
+	</div>
+</div>
+<!-- /jokes -->
+
+<!-- nba -->
+<div id="nba" class="panel">
+	<div class="content">
+		<h2>NBA赛事</h2>
+        <div id="getmsgnba"></div>
+	</div>
+</div>
+<!-- /nba -->
+
+<!-- constellation -->
+<div id="constellation" class="panel">
+	<div class="content">
+		<h2>星座运势</h2>
+        <p>选择你的星座：
+        <select id="consSelect" onchange="getSelectedCons()">
+            <option value ="shuiping">水瓶座</option>
+            <option value ="shuangyu">双鱼座</option>
+            <option value="baiyang">白羊座</option>
+            <option value="jingniu">金牛座</option>
+            <option value="shaungzi">双子座</option>
+            <option value="juxie">巨蟹座</option>
+            <option value="shizi">狮子座</option>
+            <option value="chunv">处女座</option>
+            <option value="tiancheng">天秤座</option>
+            <option value="tianxie">天蝎座</option>
+            <option value="sheshou">射手座</option>
+            <option value="mojie">摩羯座</option>
+        </select>
+        </p>
+        <div id="getmsgcons"></div>
+	</div>
+</div>
+<!-- /constellation -->
+
+<!-- Header with Navigation -->
+<div id="header">
+	<h1>NJUPT MainPage</h1>
+	<ul id="navigation">
+		<li><a id="link-today" href="#today" onclick="getDataToday()">今日</a></li>
+		<li><a id="link-news" href="#news" onclick="getDataNews()">头条</a></li>
+		<li><a id="link-jokes" href="#jokes" onclick="getDataJokes()">趣图</a></li>
+		<li><a id="link-nba" href="#nba" onclick="getDataNba()">NBA赛事</a></li>
+        <li><a id="link-constellation" href="#constellation" onclick="getDataCons()">星座运势</a></li>
+	</ul>
+</div>
+
+</body>
+
+</html>

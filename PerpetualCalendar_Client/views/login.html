@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <script type="text/javascript" src='./js/jquery.min.js'></script>
+    <script type="text/javascript" src='./js/login.js'></script>
+</head>
+<body style="background-color:#87cfe6">
+<h1>Welcome to NJUPT Mainpage</h1>
+<br>
+<p id="alert_panel" style="color:red"><%= title %></p>
+<br>
+<form action="ucenter" method="post" onsubmit = "return validate()">
+    <p>
+        <input id="name" name="name" type="text" placeholder="请输入用户名"/>
+    </p>
+    <br>
+    <p>
+        <input id="password" name="password" type="password" placeholder="请输入密码"/>
+    </p>
+    <br><br>
+    <p>
+        <input type="submit" value="登录"><br><br><br>
+    </p>
+    <p>
+        还没有账号?马上<a href="register">注册</a>
+    </p>
+</form>
+</body>
+</html>
